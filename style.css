@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root{
+    --signature-color: #39db4a;
+    --heading-color: #ff6868;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    padding: 0px 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+#logo{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#logo::first-letter{
+    font-weight: bolder;
+    color: #ffff;
+    background-color: var(--signature-color);
+    padding: 1px 6px;
+    margin-right: 2px;
+    border-radius: 5px;
+}
+#links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#links a{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: 300px;
+}
+#links a svg{
+    display: inline-flex;
+    margin-left: 8px;
+    justify-content: center;
+    align-items: center;
+}
+#action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+}
+#searchBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#searchBox input{
+    border-radius: 20px;
+    border: solid 2px var(--signature-color);
+    margin-right: 10px;
+    padding: 5px;
+}
+#searchBox input:visited{
+    border: solid 4px var(--heading-color);
+}
+#cartBox{
+    cursor: pointer;
+}
+#cartcount{
+    position: absolute;
+    font-size: 0.6rem;
+    background-color: var(--signature-color);
+    border-radius: 50px;
+    padding: 0px 4px;
+    color: #fff;
+    text-align: center;
+    transform: translateX(-10px);
+}
+#contactBox a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--signature-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    gap: 10px;
+}
+/* navbar completed */
+/* starting of main */
+#FoodiIntroContainer{
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 3rem;
+}
+#FoodiIntroData{
+    max-width: 30vw;    
+}
+#FoodiIntroData h1, p, #IntroBtn{
+    margin-bottom: 30px;
+}
+#FoodiIntroData h1{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#FoodiIntroData h1 span{
+    color: var(--signature-color);
+}
+#FoodiIntroData p{
+    color: #4A4A4A;
+}
+#IntroBtn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#IntroBtn button{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--signature-color);
+    color: #fff;
+    padding: 10px 30px;
+}
+#IntroBtn #watchVideoLink a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #4A4A4A;
+}
+#IntroBtn #watchVideoLink a svg{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 50px;
+}
+#FoodiIntroImg{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#FoodiIntroImg #mainFoodGirlImg{
+    height: 500px;
+    width: auto;
+    margin-top: 22px;
+}
+#FoodiIntroImg::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #39db4a;
+    border-radius: 50%;
+    z-index: -1;
+    translate: 0px 60px;
+}
+#foodComment{
+    position: absolute;
+    padding: 5px 15px;
+    translate: -220px -90px;
+    border-radius: 30px;
+    color: hsl(0, 100%, 60%);
+    background-color: white;
+    background: linear-gradient(90deg,rgb(247, 242, 242),rgb(222, 222, 222));
+    box-shadow: 0px 0px 10px black;
+    border-bottom-right-radius: 0px;
+}
+#FoodRating1{
+    position: absolute;
+    width: 220px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    height: max-content;
+    text-align: start;
+    background: linear-gradient(to right,hsl(0, 0%, 100%),hsl(0, 0%, 80%));
+    top: 96%;
+    left: -10%;
+}
+#FoodRating1 img{
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+}
+#FoodRating1 #ratingheading{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+#FoodRating1 #stars{
+    font-size: 0.7rem;
+}
+
+#FoodRating2{
+    position: absolute;
+    width: 220px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: start;
+    padding: 10px;
+    height: max-content;
+    text-align: start;
+    background: linear-gradient(to right,hsl(0, 0%, 100%),hsl(0, 0%, 80%));
+    top: 96%;
+    left: 60%;
+}
+
+#FoodRating2 img{
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+}
+#FoodRating2 #ratingheading{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+#FoodRating2 #stars{
+    font-size: 0.7rem;
+}
+#customerFav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 1.5em;
+}
+#customerFav #maincusfavhead{
+    color: var(--heading-color);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+}
+#customerFav #popcathead{
+    font-size: 2rem;
+}
+#customerFav #customerFavCat{
+    display: grid;
+    grid-template-columns: repeat(4,230px);
+    grid-template-rows: repeat(1, 250px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+#customerFav #customerFavCat .bentoboxcusfavcat{
+    height: 200px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.605);
+    margin: 0px 10px;
+    border-radius: 30px;
+}
+#customerFav #customerFavCat .bentoboxcusfavcat a{
+    text-decoration: none;
+    color: #000;
+}
+#customerFav #customerFavCat .bentoboxcusfavcat a img{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(154, 217, 190);
+    border-radius: 50px;
+    margin: 20px auto 10px auto;
+    object-fit: cover;
+    overflow: none;
+}
+#customerFav #customerFavCat .bentoboxcusfavcat p{
+    opacity: 0.7;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+#specialDishesContainer{
+    margin-top: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+#specialDishesContainer #specialdishhead{
+    color: var(--heading-color);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+#specialDishesContainer #specialDishTitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 15px;
+}
+#specialDishesContainer #specialDishTitle h1{
+max-width: 300px;
+font-size: 1.9rem;
+}
+#specialDishesContainer #specialDishTitle #specialdishcarouselBtn button{
+    height: 45px;
+    width: 45px;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#specialDishesContainer #specialDishTitle #specialdishcarouselBtn #nextBtnSD{
+    background-color: var(--signature-color);
+    margin-left: 25px;
+}
+#specialDishContent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+    gap: 1.2em;
+}
+#specialDishContent .specialdishBentoBox{
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 2px black;
+    text-align: start;
+    padding: 25px;
+    position: relative;
+}
+#specialDishContent .specialdishBentoBox a{
+    text-decoration: none;
+    color: #000;
+}
+#specialDishContent .specialdishBentoBox a img{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    min-height: 150px;
+    min-width: 200px;
+    padding: 0px;
+    margin: 10px 15px;
+    object-fit: cover;
+}
+#specialDishContent .specialdishBentoBox p{
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: #4A4A4A;
+}
+#specialDishContent .specialdishBentoBox #ratings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+}
+#specialDishContent .specialdishBentoBox #ratings .score{
+    font-size: 0.8rem;
+}
+#specialDishContent .specialdishBentoBox #likeStatus{
+    position: absolute;
+    top: 0%;
+    left: 85.7%;
+    padding: 10px;
+    border-radius: 0px 30px 0px 30px;
+    background-color: var(--signature-color);
+    cursor: pointer;
+}
+#specialDishContent .specialdishBentoBox #likeStatus svg{
+padding: 2px;    
+}
+#testimonials{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+#testimonials #testimonialsImg{
+        height: 405px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+}
+#testimonials .testimonialContainer{
+    width: 500px;
+}
+#testimonials #testimonialsImg img{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+}
+#testimonials #testimonialsImg::before{
+    position: absolute;
+    content: '';
+    height: 60%;
+    width: 300px;
+    background-color: var(--signature-color);
+    border-radius: 100px 100px 20px 20px;
+    z-index: -1;
+    top: 38.5%;
+}
+#testimonials .testimonialContainer #comment{
+    position: absolute;
+    background-color: #ffff;
+    box-shadow: 0px 0px 10px black;
+    padding: 5px 15px;
+    border-radius: 0px 30px 30px 30px;
+    font-size: 0.8rem;
+    top: 95%;
+    left: 60%;
+}
+#testimonials .testimonialContainer #emojiSmilling{
+    font-size: 1.3rem;
+    position: absolute;
+    transform: rotate(-20deg);
+    top: 60%;
+    left: 17%;
+}
+#testimonials .testimonialContainer #emojiPizza{
+    position: absolute;
+    font-size: 1.5rem;
+    transform: rotate(40deg);
+    top: 70%;
+    right: 17%;
+}
+#testimonialsContent h6{
+    color: var(--heading-color);
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+#testimonialsContent h1{
+    font-size: 2rem;
+    margin-bottom: 15px;    
+}
+#testimonialsContent p{
+    color: #4A4A4A;
+    opacity: 0.8;
+}
+#testimonialsContent #feedbacks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#testimonialsContent #feedbacks #CustomerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#testimonialsContent #feedbacks #customerFeed{
+    height: 50px;
+}
+#testimonialsContent #feedbacks #customerFeed p{
+    color: black;
+    font-size: 0.8rem;
+}
+#testimonialsContent #feedbacks #CustomerImg img{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(243, 237, 237);
+    border-radius: 50px;
+    border: solid 4px #ffff; 
+    object-fit: cover;
+}
+#testimonialsContent #feedbacks #CustomerImg img:nth-child(2){
+    translate: -15px 0px;
+}
+#testimonialsContent #feedbacks #CustomerImg img:nth-child(3){
+    translate: -30px 0px;
+}
+#storyservices{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 120px;
+    gap: 4em;
+}
+#storyservices #storyservicesContents{
+    width: 500px;
+    margin-top: 50px;
+}
+#storyservices #storyservicesContents h6{
+    color: var(--heading-color);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+#storyservices #storyservicesContents h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+#storyservices #storyservicesContents p{
+    color: #4A4A4A;
+}
+#storyservices #storyservicesContents button{
+    border: none;
+    border-radius: 20px;
+    background-color: var(--signature-color);
+    color: #fff;
+    padding: 10px 30px;
+}
+#storyservices #storyservicesContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    grid-template-rows: repeat(2, 250px);
+    background-color: #ffff;
+    gap: 1.8em;
+    color: var(--signature-color);
+}
+#storyservices #storyservicesContainer .ssCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 0px;
+}
+#storyservices #storyservicesContainer .ssCards img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+#storyservices #storyservicesContainer .ssCards p{
+    width: 180px;
+    height: 100px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+#FooterSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 50px;
+}
+#FooterSection #footer1{
+    width: 200px;
+}
+#FooterSection #footer1 h3{
+    font-weight: bold;
+}
+#FooterSection #footer1 h3::first-letter{
+    font-weight: bolder;
+    color: #ffff;
+    background-color: var(--signature-color);
+    padding: 1px 6px;
+    margin-right: 2px;
+    border-radius: 5px;
+}
+#FooterSection #footer1 p{
+    color: #4A4A4A;
+    padding: 20px 0px;
+}
+#FooterSection a{
+    text-decoration: none;
+    color: #000;
+}
+#FooterSection .FooterElement li{
+    list-style: none;
+}
+#FooterSection .FooterElement li:nth-child(1){
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+#SocialLinkNcopyrighContainer{
+    height: 100px;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+#SocialLinkNcopyrighContainer #footerSocialLinks{
+    height: 100%;
+    width: 35%;
+
+}
+
+#SocialLinkNcopyrighContainer #footerSocialLinks a svg:hover{
+    background-color: var(--signature-color);
+    fill: #ffff;
+    color: #ffff;
+
+}
+#SocialLinkNcopyrighContainer #footerSocialLinks a svg{
+    background-color: #7ceef6;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
+#SocialLinkNcopyrighContainer #footerCopyright p{
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 25px;
+}
